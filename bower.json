@@ -1,0 +1,14 @@
+{
+  "name": "dagskra",
+  "version": "0.1",
+  "homepage": "https://github.com/hilmarp/dagskra",
+  "authors": [
+    "Hilmar <hilmar@hilmarp.com>"
+  ],
+  "description": "Sjónvarpsdagskrá fyrir daginn",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "angular": "~1.3.15"
+  }
+}
