@@ -1,15 +1,11 @@
 (function() {
 
-	var app = angular.module('dagskraControllers', []);
+	var appControllers = angular.module('dagskraControllers', []);
 
-	app.controller('RuvController', ['$scope', '$http', function($scope, $http) {
+	appControllers.controller('ChannelController', ['$scope', '$routeParams', 'Channel', function($scope, $routeParams, Channel) {
 		// Ná í dagskrá RÚV
-		var _this = this;
-		_this.dagskra = [];
-
-		$http.get('http://apis.is/tv/ruv').success(function(data) {
-			_this.dagskra = data.results;
-			console.log(data);
+		Channel.get({channel: $routeParams.channel}, function(channel) {
+			$scope.dagskra = channel.results;
 		});
 	}]);		
 
