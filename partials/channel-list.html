@@ -1,0 +1,7 @@
+<ul class="channel-list" ng-controller="ChannelListController">
+	<li ng-repeat="channel in channels">
+		<a href="{{channel.endpoint | removeTvFromLink}}" class="btn btn-primary" ng-click="setChannel(channel.name)" ng-class="{active:isChannel(channel.name)}">
+			{{channel.name}}
+		</a>
+	</li>
+</ul>
