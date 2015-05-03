@@ -1,3 +1,9 @@
+.navbar .dropdown-menu li {
+  padding: 7px 0 0px 10px;
+}
+.navbar .dropdown-menu .divider {
+  padding: 0;
+}
 .channel-list {
   list-style-type: none;
   margin: 0;
@@ -26,11 +32,13 @@
 .schedule li .show-original-title {
   font-style: italic;
 }
-.schedule li .show-live {
-  color: #5CB85C;
-}
 .schedule li .show-description {
   float: right;
+}
+.schedule li .show-description .btn-see-more {
+  padding: 0 5px;
+  line-height: 1.4;
+  vertical-align: baseline;
 }
 .schedule li .show-description a:hover {
   cursor: pointer;
