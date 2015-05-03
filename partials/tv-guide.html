@@ -1,7 +1,15 @@
-<div>
-	<ul>
-		<li ng-repeat="show in dagskra">
-			{{show.startTime | date}} - {{show.title}}
-		</li>
-	</ul>
-</div>
+<ul class="schedule">
+	<li ng-repeat="show in schedule">
+		<span class="show-start-time">{{show.startTime | showStart}}</span>
+		<span class="show-title">{{show.title}}</span>
+		<span class="show-series" ng-show="showSeries">(S{{show.series.series}}E{{show.series.episode}})</span>
+		<span class="show-original-title">{{show.originalTitle}}</span>
+		<span class="show-aspect-ratio" ng-show="show.aspectRatio && showAspectRatio">{{show.aspectRatio | aspectRatio}}</span>
+		<span class="show-duration" ng-show="showLength">{{show.duration}}</span>
+		<span class="show-live" ng-show="show.live">{{show.live | isLive}}</span>
+		<span class="show-description" ng-show="show.description"><a title="Sjá lýsingu á {{show.title}}" data-toggle="collapse" data-target="#show-desc-{{$index}}">+</a></span>
+		<div class="collapse show-desc-collapse" id="show-desc-{{$index}}">
+			<p>{{show.description}}</p>
+		</div>
+	</li>
+</ul>

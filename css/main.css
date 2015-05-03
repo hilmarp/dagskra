@@ -3,7 +3,45 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  margin-top: 20px;
 }
 .channel-list li {
   display: inline;
+}
+.schedule {
+  list-style-type: none;
+  margin-top: 40px;
+}
+.schedule li {
+  border-bottom: 1px solid #777;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.schedule li span {
+  margin-right: 10px;
+}
+.schedule li .show-start-time {
+  font-weight: bold;
+}
+.schedule li .show-original-title {
+  font-style: italic;
+}
+.schedule li .show-live {
+  color: #5CB85C;
+}
+.schedule li .show-description {
+  float: right;
+}
+.schedule li .show-description a:hover {
+  cursor: pointer;
+}
+.schedule li .show-desc-collapse {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+#footer-info {
+  margin-top: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 12px;
 }

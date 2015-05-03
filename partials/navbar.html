@@ -7,14 +7,26 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Sjónvarpsdagskráin</a>
+			<a class="navbar-brand" href="/">Sjónvarpsdagskráin</a>
 		</div>
 		<div class="collapse navbar-collapse" id="top-navbar">
-			<ul class="nav navbar-nav">
-				<li><a href="#">Heim</a></li>
-			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Heim</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" role="button" data-toggle="dropdown">
+						Stillingar
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li ng-repeat-start="theme in themes">
+							<input type="radio" value="{{theme}}" name="appTheme" id="theme-{{theme}}" ng-model="themeName" ng-click="changeTheme(theme)" />
+							<label for="theme-{{theme}}">{{theme | capitalize}}</label>
+						</li>
+						<li ng-repeat-end class="divider"></li>
+						<li><input type="checkbox" id="showLength" ng-model="showLength" /><label for="showLength">Sýna lengd</label></li>
+						<li><input type="checkbox" id="showSeries" ng-model="showSeries" /><label for="showSeries">Sýna seríu</label></li>
+						<li><input type="checkbox" id="showAspectRatio" ng-model="showAspectRatio" /><label for="showAspectRatio">Sýna hlutfall</label></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>
