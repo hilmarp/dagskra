@@ -31,4 +31,20 @@
 		}
 	});
 
+	// Breyta + í - þegar lýsing er opnuð
+	appDirectives.directive('collapseToggle', function() {
+		return {
+			restrict: 'A',
+			link: function(scope, el, attrs) {
+				$(el).on('hide.bs.collapse', function() {
+					$(this).prev('span').children('.btn-see-more').text('+');
+				});
+
+				$(el).on('show.bs.collapse', function() {
+					$(this).prev('span').children('.btn-see-more').text('-');
+				});
+			}
+		};
+	});
+
 })();

@@ -17,17 +17,31 @@
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li ng-repeat-start="theme in themes">
-							<input type="radio" value="{{theme}}" name="appTheme" id="theme-{{theme}}" ng-model="themeName" ng-click="changeTheme(theme)" />
-							<label for="theme-{{theme}}">{{theme | capitalize}}</label>
-						</li>
-						<li ng-repeat-end class="divider"></li>
 						<li><input type="checkbox" id="showSeries" ng-model="showSeries" /><label for="showSeries">Sýna seríu</label></li>
 						<li><input type="checkbox" id="showAspectRatio" ng-model="showAspectRatio" /><label for="showAspectRatio">Sýna hlutfall</label></li>
 						<li><input type="checkbox" id="showLength" ng-model="showLength" /><label for="showLength">Sýna lengd</label></li>
+						<li class="divider"></li>
+						<li><a data-toggle="modal" data-target="#theme-modal">Velja útlit</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
+
+<div class="modal fade" id="theme-modal" tabindex="-1" role="dialog" aria-labelledby="theme-modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Velja útlit</h4>
+			</div>
+			<div class="modal-body">
+				<li ng-repeat="theme in themes">
+					<input type="radio" value="{{theme}}" name="appTheme" id="theme-{{theme}}" ng-model="themeName" ng-click="changeTheme(theme)" />
+					<label for="theme-{{theme}}">{{theme | capitalize}}</label>
+				</li>
+			</div>
+		</div>
+	</div>
+</div>

@@ -7,8 +7,10 @@
 		<span class="show-aspect-ratio text-info" ng-show="show.aspectRatio && showAspectRatio">{{show.aspectRatio | aspectRatio}}</span>
 		<span class="show-duration text-info" ng-show="showLength">{{show.duration | duration}}</span>
 		<span class="show-live text-success" ng-show="show.live">{{show.live | isLive}}</span>
-		<span class="show-description" ng-show="show.description"><a title="Sjá lýsingu á {{show.title}}" class="btn btn-sm btn-see-more btn-default" data-toggle="collapse" data-target="#show-desc-{{$index}}">+</a></span>
-		<div class="collapse show-desc-collapse" id="show-desc-{{$index}}">
+		<span class="show-description" ng-show="show.description">
+			<button type="button" title="Sjá lýsingu á {{show.title}}" class="btn btn-sm btn-default btn-see-more" data-toggle="collapse" data-target="#show-desc-{{$index}}">+</button>
+		</span>
+		<div class="collapse show-desc-collapse" id="show-desc-{{$index}}" collapse-toggle>
 			<p>{{show.description}}</p>
 		</div>
 	</li>

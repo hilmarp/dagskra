@@ -12,6 +12,9 @@
 			// Stöð 2 kemur tvisvar, seinna Stöð 2 á að vera Stöð 3
 			channels[7].name = 'Stöð 3';
 
+			// RÚV Íþróttir er ekki í gangi og skilar því engu, fjarlægja
+			channels.splice(1, 1);
+
 			$scope.channels = channels;
 		});
 
