@@ -14,3 +14,5 @@ $ grunt production
 
 `grunt watch` fylgist með breytingum á LESS skrám og compilar í CSS við breytingar.
 `grunt production` compilar LESS með minify.
+
+Hérna er demo (ekki endilega nýjasta útgáfan samt): [http://hilmarp.com/dagskra](http://hilmarp.com/dagskra).
